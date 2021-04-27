@@ -2,7 +2,7 @@
 describe("Verify the Weather API", () => {
     const url = "https://api.openweathermap.org/data/2.5/onecall?lat=-33.8&lon=151.2&exclude=current,hourly,minutely,alerts&units=metric&appid=0db81d3818c66d777b60f4367cd9a9a0"
 
-    it('should display the date if temperature is above 20 degrees celcius', () => {
+    it('should display the dates based on weather and temperature criteria', () => {
         // network stubs
         cy.intercept(url, { fixture: 'weather_data_mix_scenarios.json' }).as('getWeatherDataMixScenarios');
         cy.visit('/');
@@ -32,7 +32,7 @@ describe("Verify the Weather API", () => {
         cy.screenshot()
     });
 
-    it('should display all days above 20 degrees celcius', () => {
+    it('should display all days where weather is Clear', () => {
         // network stubs
         cy.intercept(url, { fixture: 'weather_data_all_days_sunny.json' }).as('getWeatherDataAllDaysSunny');
         cy.visit('/');
