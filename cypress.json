@@ -1,0 +1,16 @@
+{
+    "defaultCommandTimeout": 1000,
+    "requestTimeout": 10000,
+    "responseTimeout": 10000,
+    "projectId": "nv5sz7",
+    "chromeWebSecurity": false,
+    "video": false,
+    "videoUploadOnPasses": false,
+    "viewportWidth": 1280,
+    "viewportHeight": 800,
+    "pageLoadTimeout": 20000,
+    "retries": {
+      "runMode": 1,
+      "openMode": 0
+    }
+  }

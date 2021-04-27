@@ -1,0 +1,160 @@
+{
+    "lat": -33.8,
+    "lon": 151.2,
+    "timezone": "Australia/Sydney",
+    "timezone_offset": 36000,
+    "daily": [
+        {
+            "dt": 1619398800,
+            "temp": {
+                "day": 21.0,
+                "min": 11.79,
+                "max": 20.28,
+                "night": 14.6,
+                "eve": 17.26,
+                "morn": 12.25
+            },
+            "weather": [
+                {
+                    "id": 500,
+                    "main": "Rain",
+                    "description": "light rain",
+                    "icon": "10d"
+                }
+            ]
+        },
+        {
+            "dt": 1619485200,
+            "temp": {
+                "day": 20.0,
+                "min": 12.7,
+                "max": 20.67,
+                "night": 16.87,
+                "eve": 17.6,
+                "morn": 12.87
+            },
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "clear sky",
+                    "icon": "01d"
+                }
+            ]
+        },
+        {
+            "dt": 1619571600,
+            "temp": {
+                "day": 20.1,
+                "min": 11.79,
+                "max": 20.28,
+                "night": 14.6,
+                "eve": 17.26,
+                "morn": 12.25
+            },
+            "weather": [
+                {
+                    "id": 500,
+                    "main": "Rain",
+                    "description": "light rain",
+                    "icon": "10d"
+                }
+            ]
+        },
+        {
+            "dt": 1619658000,
+            "temp": {
+                "day": 21.9,
+                "min": 12.7,
+                "max": 20.67,
+                "night": 16.87,
+                "eve": 17.6,
+                "morn": 12.87
+            },
+            "weather": [
+                {
+                    "id": 500,
+                    "main": "Rain",
+                    "description": "light rain",
+                    "icon": "10d"
+                }
+            ]
+        },
+        {
+            "dt": 1619744400,
+            "temp": {
+                "day": 19.51,
+                "min": 11.79,
+                "max": 20.28,
+                "night": 14.6,
+                "eve": 17.26,
+                "morn": 12.25
+            },
+            "weather": [
+                {
+                    "id": 500,
+                    "main": "Rain",
+                    "description": "light rain",
+                    "icon": "10d"
+                }
+            ]
+        },
+        {
+            "dt": 1619830800,
+            "temp": {
+                "day": 19.9,
+                "min": 12.7,
+                "max": 20.67,
+                "night": 16.87,
+                "eve": 17.6,
+                "morn": 12.87
+            },
+            "weather": [
+                {
+                    "id": 500,
+                    "main": "Rain",
+                    "description": "light rain",
+                    "icon": "10d"
+                }
+            ]
+        },
+        {
+            "dt": 1619917200,
+            "temp": {
+                "day": 19.51,
+                "min": 11.79,
+                "max": 20.28,
+                "night": 14.6,
+                "eve": 17.26,
+                "morn": 12.25
+            },
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "clear sky",
+                    "icon": "01d"
+                }
+            ]
+        },
+        {
+            "dt": 1620003600,
+            "temp": {
+                "day": 19.9,
+                "min": 12.7,
+                "max": 20.67,
+                "night": 16.87,
+                "eve": 17.6,
+                "morn": 12.87
+            },
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "clear sky",
+                    "icon": "01d"
+                }
+            ]
+        }
+    ]
+}

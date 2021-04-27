@@ -1,0 +1,25 @@
+{
+  "name": "ampion_assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "cypress run",
+    "start": "node server.js",
+    "open-cypress": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasuniac/ampion_assessment.git"
+  },
+  "author": "Cherag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vasuniac/ampion_assessment/issues"
+  },
+  "homepage": "https://github.com/vasuniac/ampion_assessment#readme",
+  "devDependencies": {
+    "cypress": "^7.1.0"
+  },
+  "dependencies": {}
+}

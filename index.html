@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- font awesome from BootstrapCDN -->
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/static/app.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <style>
+        table, th, td {
+        border: 1px solid black;
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
+        }
+        </style>
+    </head>
+    <body class="home">
+        <div class="container">
+            <div class="login-page clearfix">
+                <div class="logged-in-box auth0-box logged-in" style="background:darkgrey;">
+                    <h2>WEATHER FORECAST DASHBOARD - AMPION QA TASK</h2>
+                    <h3>Below days have temperature over 20 degrees celcius</h3>
+                    <table id='temp-table'>
+                    </table>
+                    <br>
+                    <h3>Below days have sunny weather</h3>
+                    <table id='weather-table'>
+                    </table>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <script>
+            //Initiate carousels
+            const weather_api_base_url = "https://api.openweathermap.org/data/2.5";
+            const api_key = "0db81d3818c66d777b60f4367cd9a9a0";
+            const exclude = "current,hourly,minutely,alerts";
+            var temp_filter = 20;
+            var weather_filter = 'Clear'
+            var lat = -33.8;
+            var lon = 151.2;
+
+            $(document).ready(function(){
+                display_data();
+            });
+
+
+            function appendTempFilteredDates(data) {
+                //append
+                if(data.temp.day > temp_filter) {
+                    var d = new Date(data.dt*1000);
+                    str = "<tr><td><h4>" + d.toString() + "<h4></td></tr>"
+                    $('#temp-table').append(str)
+                }
+            }
+
+            function appendWeatherFilteredDates(data) {
+            //append
+            console.log('Processing weather ' + data.weather[0].main)
+            if(data.weather[0].main == weather_filter) {
+                console.log('Weather is sunny on ' + data.dt)
+                var d = new Date(data.dt*1000);
+                str = "<tr><td><h4>" + d.toString() + "<h4></td></tr>"
+                    $('#weather-table').append(str)
+                }
+            }
+
+            function display_data() {
+                $.ajax({
+                type: "GET",
+                url: weather_api_base_url + "/onecall?lat=" + lat + "&lon=" + lon + "&exclude=" + exclude + "&units=metric&appid=" + api_key,
+                success: function( data ) {
+                    //Remove carousel cells
+                    $('#temp-table').empty();
+                    $('#weather-table').empty();
+                    console.log(data.daily)
+                    arr = data.daily;
+                    arr = arr.slice(1,6)
+                    arr.forEach(appendTempFilteredDates);
+                    arr.forEach(appendWeatherFilteredDates);
+                }
+                });
+            }
+
+        </script>
+    </body>
+</html>
