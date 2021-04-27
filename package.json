@@ -4,7 +4,7 @@
   "description": "",
   "main": "",
   "scripts": {
-    "test": "cypress run",
+    "test": "cypress run --record --key 3c066f16-a01c-4df9-bfde-6b2149f84930",
     "start": "node server.js",
     "open-cypress": "cypress open"
   },
